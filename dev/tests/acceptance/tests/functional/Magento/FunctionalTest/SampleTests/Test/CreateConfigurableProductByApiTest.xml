@@ -12,14 +12,16 @@
         <annotations>
             <features value="Create a Configurable Product By API"/>
             <stories value="Create a Configurable Product By API"/>
-            <group value="skip"/>
+            <skip>
+                <issueId value="SAMPLE"/>
+            </skip>
         </annotations>
         <before>
             <createData stepKey="categoryHandle" entity="SimpleSubCategory" />
             <createData stepKey="baseConfigProductHandle" entity="BaseConfigurableProduct" >
                 <requiredEntity createDataKey="categoryHandle"/>
             </createData>
-            <createData stepKey="productAttributeHandle" entity="productAttributeWithTwoOptions"/>
+            <createData stepKey="productAttributeHandle" entity="productAttributeWithDropdownTwoOptions"/>
 
             <createData stepKey="productAttributeOption1Handle" entity="productAttributeOption1">
                 <requiredEntity createDataKey="productAttributeHandle"/>
